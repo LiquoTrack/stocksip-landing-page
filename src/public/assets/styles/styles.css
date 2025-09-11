@@ -827,7 +827,7 @@ header .navbar button:hover {
     transform: translateY(0);
 }
 
-/* FAQ with animations */
+/* FAQ Section */
 .faq-section {
     max-width: 1000px;
     padding: 8rem 20px;
@@ -886,6 +886,9 @@ header .navbar button:hover {
     cursor: pointer;
     background: white;
     transition: all 0.3s ease;
+    border: none;
+    width: 100%;
+    text-align: left;
 }
 
 .faq-question:hover {
@@ -893,21 +896,26 @@ header .navbar button:hover {
 }
 
 .faq-answer {
-    padding: 0 25px;
-    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    max-height: 0;
+    background: rgba(247, 237, 220, 0.5);
+}
+
+.faq-answer-content {
+    padding: 0 25px 25px 25px;
     font-size: 2rem;
     color: var(--light-text);
     font-weight: 400;
-    background: rgba(247, 237, 220, 0.5);
     line-height: 1.6;
-    transition: max-height 0.5s ease, padding 0.3s ease;
 }
 
-/* Cuando el ítem está activo, se expande */
 .faq-item.active .faq-answer {
-    max-height: 1000px;   /* suficiente para textos largos */
-    padding: 25px;
+    max-height: 500px;
+}
+
+.faq-item.active .faq-answer-content {
+    padding-top: 25px;
 }
 
 .faq-item.active .arrow {
@@ -918,6 +926,16 @@ header .navbar button:hover {
     transition: transform 0.3s ease;
     font-size: 1.8rem;
     color: var(--magenta);
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-question {
+    background: linear-gradient(135deg, rgba(110, 0, 129, 0.08) 0%, rgba(89, 3, 58, 0.08) 100%);
+    color: var(--magenta);
+}
+
+.faq-item.active .faq-question .arrow {
+    color: var(--wine);
 }
 
 
@@ -933,18 +951,6 @@ header .navbar button:hover {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-}
-
-.start-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, var(--purple), var(--wine));
-    transition: left 0.3s ease;
-    z-index: -1;
 }
 
 .start-button:hover::before {
@@ -2061,10 +2067,9 @@ header .navbar button:hover {
 .plan-card li {
     font-size: 1.8rem;
     color: var(--light-text);
-    padding: 1.2rem 0;
     border-bottom: 1px solid rgba(123, 37, 66, 0.1);
     position: relative;
-    padding-left: 3rem;
+    padding: 1.2rem 0 1.2rem 3rem;
     transition: all 0.3s ease;
 }
 
@@ -2164,9 +2169,8 @@ header .navbar button:hover {
 .plan-conditions li {
     font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem 0;
     position: relative;
-    padding-left: 4rem;
+    padding: 1.5rem 0 1.5rem 4rem;
     text-align: left;
     max-width: 600px;
     margin: 0 auto;
