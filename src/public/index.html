@@ -64,46 +64,6 @@
     </div>
 </section>
 
-<section class="product-showcase" id="product">
-    <h2 class="animate-on-scroll">Product Showcase</h2>
-    <p class="animate-on-scroll">Experience the power of intelligent inventory management through our intuitive interface</p>
-
-    <div class="image-carousel animate-on-scroll">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="https://via.placeholder.com/800x500/6E0081/FFFFFF?text=Dashboard+Overview" alt="Dashboard Overview">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/59033A/FFFFFF?text=Inventory+Management" alt="Inventory Management">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/26021D/FFFFFF?text=Analytics+Reports" alt="Analytics Reports">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/D98C4A/FFFFFF?text=Alert+System" alt="Alert System">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/8B4A9C/FFFFFF?text=Mobile+App" alt="Mobile Application">
-            </div>
-        </div>
-
-        <button class="carousel-nav prev" onclick="changeSlide(-1)">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-nav next" onclick="changeSlide(1)">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </div>
-
-    <div class="carousel-indicators">
-        <span class="indicator active" onclick="goToSlide(0)"></span>
-        <span class="indicator" onclick="goToSlide(1)"></span>
-        <span class="indicator" onclick="goToSlide(2)"></span>
-        <span class="indicator" onclick="goToSlide(3)"></span>
-        <span class="indicator" onclick="goToSlide(4)"></span>
-    </div>
-</section>
-
 <section class="stats-section">
     <div class="stats-container">
         <h2 class="stats-title animate-on-scroll" data-i18n="stats_title">Results that speak for themselves</h2>
@@ -162,49 +122,101 @@
 
     <div class="card-container">
         <div class="card animate-on-scroll">
-            <img src="https://via.placeholder.com/120x120/D98C4A/FFFFFF?text=📊" alt="Stock Tracking">
-            <h3 data-i18n="features.card1.title">Stock Tracking</h3>
-            <p data-i18n="features.card1.description">Monitor your inventory in real time with comprehensive analytics and detailed reporting systems.</p>
-            <div class="card-details">
-                <h4 data-i18n="features.card1.subtitle">More about Tracking</h4>
-                <p data-i18n="features.card1.details">Get complete visibility of your inventory levels.</p>
-                <ul>
-                    <li data-i18n="features.card1.list.0">Real-time control</li>
-                    <li data-i18n="features.card1.list.1">Low stock alerts</li>
-                    <li data-i18n="features.card1.list.2">Detailed history</li>
-                </ul>
+            <div class="card-front">
+                <img src="assets/images/icon-tracking.png" alt="Stock Tracking">
+                <h3 data-i18n="features.card1.title">Stock Tracking</h3>
+                <p data-i18n="features.card1.description">Monitor your inventory in real time with comprehensive analytics and detailed reporting systems.</p>
+            </div>
+            <div class="card-back">
+                <div class="card-details">
+                    <h4 data-i18n="features.card1.subtitle">More about Tracking</h4>
+                    <p data-i18n="features.card1.details">Get complete visibility of your inventory levels.</p>
+                    <ul>
+                        <li data-i18n="features.card1.list.0">Real-time control</li>
+                        <li data-i18n="features.card1.list.1">Low stock alerts</li>
+                        <li data-i18n="features.card1.list.2">Detailed history</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="card animate-on-scroll">
-            <img src="https://via.placeholder.com/120x120/D98C4A/FFFFFF?text=🔔" alt="Bell Icon">
-            <h3 data-i18n="features.card2.title">Receive Alerts</h3>
-            <p data-i18n="features.card2.description">Stay informed about stock levels, expiration dates, and critical inventory movements instantly.</p>
-            <div class="card-details">
-                <h4 data-i18n="features.card2.subtitle">Alert Details</h4>
-                <p data-i18n="features.card2.details">Don't miss anything important.</p>
-                <ul>
-                    <li data-i18n="features.card2.list.0">Email notifications</li>
-                    <li data-i18n="features.card2.list.1">Expiration alerts</li>
-                    <li data-i18n="features.card2.list.2">Reorder reminders</li>
-                </ul>
+            <div class="card-front">
+                <img src="assets/images/icon-bell.png" alt="Bell Icon">
+                <h3 data-i18n="features.card2.title">Receive Alerts</h3>
+                <p data-i18n="features.card2.description">Stay informed about stock levels, expiration dates, and critical inventory movements instantly.</p>
+            </div>
+            <div class="card-back">
+                <div class="card-details">
+                    <h4 data-i18n="features.card2.subtitle">Alert Details</h4>
+                    <p data-i18n="features.card2.details">Don't miss anything important.</p>
+                    <ul>
+                        <li data-i18n="features.card2.list.0">Email notifications</li>
+                        <li data-i18n="features.card2.list.1">Expiration alerts</li>
+                        <li data-i18n="features.card2.list.2">Reorder reminders</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="card animate-on-scroll">
-            <img src="https://via.placeholder.com/120x120/D98C4A/FFFFFF?text=💰" alt="Optimization Icon">
-            <h3 data-i18n="features.card3.tittle">Optimize Purchases</h3>
-            <p data-i18n="features.card3.description">Make data-driven decisions with intelligent purchase recommendations and supplier analysis.</p>
-            <div class="card-details">
-                <h4 data-i18n="features.card3.subtitle">Optimization Tips</h4>
-                <p data-i18n="features.card3.details">Buy smarter and more efficiently.</p>
-                <ul>
-                    <li data-i18n="features.card3.list.0">Analyze your sales</li>
-                    <li data-i18n="features.card3.list.1">Forecast demand</li>
-                    <li data-i18n="features.card3.list.2">Compare suppliers</li>
-                </ul>
+            <div class="card-front">
+                <img src="assets/images/icon-money.png" alt="Optimization Icon">
+                <h3 data-i18n="features.card3.title">Optimize Purchases</h3>
+                <p data-i18n="features.card3.description">Make data-driven decisions with intelligent purchase recommendations and supplier analysis.</p>
+            </div>
+            <div class="card-back">
+                <div class="card-details">
+                    <h4 data-i18n="features.card3.subtitle">Optimization Tips</h4>
+                    <p data-i18n="features.card3.details">Buy smarter and more efficiently.</p>
+                    <ul>
+                        <li data-i18n="features.card3.list.0">Analyze your sales</li>
+                        <li data-i18n="features.card3.list.1">Forecast demand</li>
+                        <li data-i18n="features.card3.list.2">Compare suppliers</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="product-showcase" id="product">
+    <h2 class="animate-on-scroll">Product Showcase</h2>
+    <p class="animate-on-scroll">Experience the power of intelligent inventory management through our intuitive interface</p>
+
+    <div class="image-carousel animate-on-scroll">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://via.placeholder.com/800x500/6E0081/FFFFFF?text=Dashboard+Overview" alt="Dashboard Overview">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/800x500/59033A/FFFFFF?text=Inventory+Management" alt="Inventory Management">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/800x500/26021D/FFFFFF?text=Analytics+Reports" alt="Analytics Reports">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/800x500/D98C4A/FFFFFF?text=Alert+System" alt="Alert System">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/800x500/8B4A9C/FFFFFF?text=Mobile+App" alt="Mobile Application">
+            </div>
+        </div>
+
+        <button class="carousel-nav prev" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-nav next" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <div class="carousel-indicators">
+        <span class="indicator active" onclick="goToSlide(0)"></span>
+        <span class="indicator" onclick="goToSlide(1)"></span>
+        <span class="indicator" onclick="goToSlide(2)"></span>
+        <span class="indicator" onclick="goToSlide(3)"></span>
+        <span class="indicator" onclick="goToSlide(4)"></span>
     </div>
 </section>
 
@@ -442,12 +454,12 @@
         const faqItem = element.parentElement;
         const isActive = faqItem.classList.contains('active');
 
-        // Close all FAQ items
+        // Cierra todos los items
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
         });
 
-        // Open clicked item if it wasn't active
+        // Abre el clickeado si no estaba activo
         if (!isActive) {
             faqItem.classList.add('active');
         }
@@ -466,6 +478,9 @@
             }
         });
     }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
 
     // Counter animation for stats
     function animateCounters() {

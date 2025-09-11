@@ -43,7 +43,7 @@ const translations = {
         "features.card2.list.0": "Email notifications",
         "features.card2.list.1": "Expiration alerts",
         "features.card2.list.2": "Reorder reminders",
-        "features.card3.tittle": "Optimize Your Purchases",
+        "features.card3.title": "Optimize Your Purchases",
         "features.card3.description": "Make informed decisions before buying",
         "features.card3.subtitle": "Optimization Tips",
         "features.card3.details": "Buy smarter and more efficiently.",
