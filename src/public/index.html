@@ -16,7 +16,7 @@
 
     <nav class="navbar">
         <a href="#home" data-i18n="nav.home">Home</a>
-        <a href="#product">Product</a>
+        <a href="#product" data-i18n="nav.product">Product</a>
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
         <a href="#faq">FAQ</a>
@@ -214,19 +214,19 @@
     <div class="image-carousel animate-on-scroll">
         <div class="carousel-container">
             <div class="carousel-slide active">
-                <img src="https://via.placeholder.com/800x500/6E0081/FFFFFF?text=Dashboard+Overview" alt="Dashboard Overview">
+                <img src="assets/images/login-register.png" alt="Dashboard Overview">
             </div>
             <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/59033A/FFFFFF?text=Inventory+Management" alt="Inventory Management">
+                <img src="assets/images/warehouse.png" alt="Inventory Management">
             </div>
             <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/26021D/FFFFFF?text=Analytics+Reports" alt="Analytics Reports">
+                <img src="assets/images/product.png" alt="Analytics Reports">
             </div>
             <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/D98C4A/FFFFFF?text=Alert+System" alt="Alert System">
+                <img src="assets/images/guide.png" alt="Alert System">
             </div>
             <div class="carousel-slide">
-                <img src="https://via.placeholder.com/800x500/8B4A9C/FFFFFF?text=Mobile+App" alt="Mobile Application">
+                <img src="assets/images/other.png" alt="Mobile Application">
             </div>
         </div>
 
@@ -396,33 +396,63 @@
         <h2 class="animate-on-scroll" data-i18n="plans.title">Plans</h2>
 
         <div class="plans-container">
+            <!-- Free Plan -->
             <div class="plan-card animate-on-scroll">
-                <h3 data-i18n="plans.free">Free</h3>
+                <h3 data-i18n="plans.free.title">Free</h3>
+                <div class="price" data-i18n="plans.free.price">S/. 0</div>
                 <ul>
-                    <li data-i18n="plans.free.list.0">Manage up to 50 products</li>
-                    <li data-i18n="plans.free.list.1">Storage guides</li>
-                    <li data-i18n="plans.free.list.2">Basic alerts</li>
+                    <li data-i18n="plans.free.warehouse">Up to 1 warehouse</li>
+                    <li data-i18n="plans.free.products">Manage up to 50 products</li>
+                    <li data-i18n="plans.free.guides">Storage guides</li>
+                    <li data-i18n="plans.free.alerts">Basic alerts</li>
+                    <li data-i18n="plans.free.support">Community support</li>
                 </ul>
-                <button data-i18n="plans.free.button">Choose</button>
+                <button data-i18n="plans.free.button">Get Started</button>
             </div>
 
+            <!-- Monthly Premium Plan - Most Popular -->
             <div class="plan-card premium animate-on-scroll">
-                <h3 data-i18n="plans.premium">Premium</h3>
-                <div class="price" data-i18n="plans.premium.list.0">S/. 19.90</div>
+                <h3 data-i18n="plans.monthly.title">Monthly Premium</h3>
+                <div class="price" data-i18n="plans.monthly.price">S/. 19.90<span style="font-size: 1.6rem; font-weight: 400;">/month</span></div>
                 <ul>
-                    <li data-i18n="plans.premium.list.1">Priority support</li>
-                    <li data-i18n="plans.premium.list.2">Custom alerts</li>
+                    <li data-i18n="plans.monthly.warehouse">Up to 5 warehouses</li>
+                    <li data-i18n="plans.monthly.products">Unlimited products</li>
+                    <li data-i18n="plans.monthly.guides">Advanced storage guides</li>
+                    <li data-i18n="plans.monthly.alerts">Custom alerts & notifications</li>
+                    <li data-i18n="plans.monthly.support">Priority support</li>
+                    <li data-i18n="plans.monthly.analytics">Advanced analytics</li>
+                    <li data-i18n="plans.monthly.integration">API integration</li>
                 </ul>
-                <button data-i18n="plans.premium.button">Choose</button>
+                <button data-i18n="plans.monthly.button">Start Free Trial</button>
+            </div>
+
+            <!-- Annual Premium Plan -->
+            <div class="plan-card animate-on-scroll">
+                <h3 data-i18n="plans.annual.title">Annual Premium</h3>
+                <div class="price" data-i18n="plans.annual.price">S/. 179.90<span style="font-size: 1.6rem; font-weight: 400;">/year</span></div>
+                <div style="background: var(--golden); color: var(--wine); padding: 0.5rem 1rem; border-radius: 15px; font-size: 1.4rem; font-weight: 600; margin: 1rem 0;" data-i18n="plans.annual.savings">Save 25%!</div>
+                <ul>
+                    <li data-i18n="plans.annual.warehouse">Up to 10 warehouses</li>
+                    <li data-i18n="plans.annual.products">Unlimited products</li>
+                    <li data-i18n="plans.annual.guides">Premium storage guides</li>
+                    <li data-i18n="plans.annual.alerts">Smart alerts & automation</li>
+                    <li data-i18n="plans.annual.support">24/7 priority support</li>
+                    <li data-i18n="plans.annual.analytics">Premium analytics & reports</li>
+                    <li data-i18n="plans.annual.integration">Full API access</li>
+                    <li data-i18n="plans.annual.training">Personal training session</li>
+                </ul>
+                <button data-i18n="plans.annual.button">Choose Annual</button>
             </div>
         </div>
 
         <div class="plan-conditions animate-on-scroll">
-            <h4 data-i18n="plans.description">Premium Plan Conditions</h4>
+            <h4 data-i18n="plans.conditions.title">Plan Features & Conditions</h4>
             <ul>
-                <li data-i18n="plans.list.0">No contracts: cancel anytime.</li>
-                <li data-i18n="plans.list.1">Free trial for 14 days.</li>
-                <li data-i18n="plans.list.2">Available for both liquor stores and distributors.</li>
+                <li data-i18n="plans.conditions.trial">14-day free trial for all premium plans</li>
+                <li data-i18n="plans.conditions.cancel">No contracts: cancel anytime</li>
+                <li data-i18n="plans.conditions.availability">Available for liquor stores and distributors</li>
+                <li data-i18n="plans.conditions.support">24/7 customer support for premium users</li>
+                <li data-i18n="plans.conditions.upgrade">Easy upgrade/downgrade between plans</li>
             </ul>
         </div>
     </section>

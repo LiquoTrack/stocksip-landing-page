@@ -953,13 +953,21 @@ header .navbar button:hover {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     animation: fadeInUp 0.8s ease 0.4s both;
     z-index: 2;
+    /* Altura flexible para adaptarse al contenido */
+    min-height: 400px;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    /* Altura automática para adaptarse a las imágenes */
+    min-height: 400px;
     overflow: hidden;
+    /* Fondo para casos donde las imágenes no llenen completamente el espacio */
+    background: var(--light-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-slide {
@@ -969,6 +977,10 @@ header .navbar button:hover {
     opacity: 0;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
+    /* Centrar el contenido de la slide */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-slide.active {
@@ -981,10 +993,40 @@ header .navbar button:hover {
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    /* Cambios principales para mostrar imágenes completas */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Cambiado de 'cover' a 'contain' */
     border-radius: 15px;
+    /* Centrar la imagen dentro de su contenedor */
+    display: block;
+    margin: 0 auto;
+    /* Sombra sutil para mejorar la presentación */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Opción alternativa: Para imágenes muy pequeñas, permitir que se muestren en tamaño natural */
+.carousel-slide img.natural-size {
+    max-width: none;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+}
+
+/* Para imágenes muy anchas */
+.carousel-slide img.wide-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+/* Para imágenes muy altas */
+.carousel-slide img.tall-image {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
 }
 
 .carousel-nav {
@@ -1004,6 +1046,8 @@ header .navbar button:hover {
     color: var(--magenta);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    /* Asegurar que los botones estén por encima de las imágenes */
+    z-index: 10;
 }
 
 .carousel-nav:hover {
@@ -3173,7 +3217,15 @@ footer {
         transform: scale(1.05);
     }
 
+    .plans-container {
+        gap: 3rem;
+        padding: 0 2rem;
+    }
 
+    .plan-card {
+        min-width: 280px;
+        max-width: 350px;
+    }
 }
 
 
@@ -3211,16 +3263,29 @@ footer {
 
     .image-carousel {
         max-width: 95%;
+        margin: 0 auto;
     }
 
     .carousel-container {
-        height: 300px;
+        min-height: 300px;
+    }
+
+    .carousel-slide img {
+        max-height: 300px;
     }
 
     .carousel-nav {
         width: 40px;
         height: 40px;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+    }
+
+    .carousel-nav.prev {
+        left: 10px;
+    }
+
+    .carousel-nav.next {
+        right: 10px;
     }
 
     .stats-section {
@@ -3651,6 +3716,15 @@ footer {
 
     .carousel-nav.next {
         right: 10px;
+    }
+
+    .carousel-container {
+        min-height: 250px;
+    }
+
+    .carousel-slide img {
+        max-height: 250px;
+        border-radius: 10px;
     }
 
     .stats-grid {
