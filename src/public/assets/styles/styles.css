@@ -2629,22 +2629,7 @@ footer {
     animation: slideInFromLeft 0.8s ease 0.5s forwards;
 }
 
-.back-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, var(--purple), var(--wine));
-    transition: left 0.3s ease;
-    z-index: -1;
-    border-radius: 5rem;
-}
 
-.back-button:hover::before {
-    left: 0;
-}
 
 .back-button:hover {
     transform: translateX(-10px) translateY(-3px);
