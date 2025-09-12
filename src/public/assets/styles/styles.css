@@ -318,7 +318,7 @@ header .navbar button:hover {
 .btn {
     display: inline-block;
     border-radius: 5rem;
-    background: linear-gradient(45deg, var(--golden), #ff8c42);
+    background: linear-gradient(45deg, var(--magenta), var(--purple));
     color: #fff;
     padding: 1.2rem 3rem;
     cursor: pointer;
@@ -336,7 +336,7 @@ header .navbar button:hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #ff8c42, var(--golden));
+    background: linear-gradient(45deg, var(--purple), var(--wine));
     transition: left 0.3s ease;
     z-index: -1;
 }
@@ -407,7 +407,7 @@ header .navbar button:hover {
 .card {
     width: 320px;
     padding: 30px;
-    background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
+    background: linear-gradient(135deg, var(--wine) 0%, var(--magenta) 100%);
     border-radius: 25px;
     box-shadow: 0 15px 35px rgba(110, 0, 129, 0.3);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -499,7 +499,6 @@ header .navbar button:hover {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 60px;
 }
 
 .stats-grid {
@@ -581,145 +580,52 @@ header .navbar button:hover {
     }
 }
 
-/* Product Showcase Section */
-.product-showcase {
-    padding: 8rem 9%;
-    background: linear-gradient(135deg, #f8f9fa 0%, var(--light-background) 100%);
-    text-align: center;
-}
-
-.product-showcase h2 {
-    font-size: 5rem;
-    font-weight: 900;
-    color: var(--wine);
-    margin-bottom: 2rem;
-    animation: fadeInUp 0.8s ease;
-}
-
-.product-showcase p {
-    font-size: 2.5rem;
-    color: var(--purple);
-    margin-bottom: 6rem;
-    font-weight: 400;
-    animation: fadeInUp 0.8s ease 0.2s both;
-}
-
-.image-carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    animation: fadeInUp 0.8s ease 0.4s both;
-}
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-}
-
-.carousel-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.5s ease-in-out;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.carousel-slide.prev {
-    transform: translateX(-100%);
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.carousel-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--magenta);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.carousel-nav:hover {
-    background: var(--magenta);
-    color: white;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-nav.prev {
-    left: 20px;
-}
-
-.carousel-nav.next {
-    right: 20px;
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(89, 3, 58, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.indicator.active {
-    background: var(--magenta);
-    transform: scale(1.2);
-}
-
-.indicator:hover {
-    background: var(--purple);
-}
-
-
-
-/* Enhanced Cards with Animation */
 /* Features Section */
 .features {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 12rem 0;
+    background: linear-gradient(135deg,
+    var(--light-background) 0%,
+    var(--light-background) 50%,
+    var(--light-background) 100%);
+    position: relative;
+    overflow: hidden;
     min-height: 100vh;
 }
 
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="features-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(123,37,66,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23features-pattern)"/></svg>');
+    animation: float 15s ease-in-out infinite;
+    opacity: 0.6;
+}
+
 .features h2 {
+    font-size: 5rem;
+    font-weight: 900;
     text-align: center;
-    font-size: 4rem;
-    color: var(--dark-background);
-    margin-bottom: 60px;
-    font-weight: 700;
+    color: var(--wine);
+    margin-bottom: 6rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 8px rgba(43, 0, 13, 0.2);
+}
+
+.features h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--magenta), var(--purple), var(--golden));
+    border-radius: 2px;
+    animation: shimmer 2s ease-in-out infinite;
 }
 
 /* Steps Container */
@@ -730,6 +636,8 @@ header .navbar button:hover {
     gap: 40px;
     margin-bottom: 80px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
 }
 
 .step {
@@ -785,6 +693,8 @@ header .navbar button:hover {
     flex-wrap: wrap;
     perspective: 1000px;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Flip Card Wrapper */
@@ -932,10 +842,9 @@ header .navbar button:hover {
 .card-details li {
     font-size: 1.5rem;
     color: var(--light-background);
-    padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
-    padding-left: 30px;
+    padding: 12px 0 12px 30px;
     transition: all 0.3s ease;
 }
 
@@ -974,6 +883,497 @@ header .navbar button:hover {
 .features .animate-on-scroll.animated {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Product Showcase Section */
+.product-showcase {
+    padding: 12rem 0;
+    background: linear-gradient(135deg,
+    var(--light-background) 0%,
+    var(--light-background) 50%,
+    var(--light-background) 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="showcase-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(123,37,66,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23showcase-pattern)"/></svg>');
+    animation: float 15s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.product-showcase h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--wine);
+    margin-bottom: 6rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 8px rgba(43, 0, 13, 0.2);
+}
+
+.product-showcase h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--magenta), var(--purple), var(--golden));
+    border-radius: 2px;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.product-showcase p {
+    font-size: 2.5rem;
+    color: var(--light-text);
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    font-weight: 400;
+    opacity: 0.8;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.image-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 0.8s ease 0.4s both;
+    z-index: 2;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.carousel-slide.prev {
+    transform: translateX(-100%);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--magenta);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-nav:hover {
+    background: var(--magenta);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+    left: 20px;
+}
+
+.carousel-nav.next {
+    right: 20px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(89, 3, 58, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--magenta);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: var(--purple);
+}
+
+/* VIDEO SECTION */
+.video-section {
+    padding: 12rem 0;
+    background: linear-gradient(135deg,
+    var(--light-background) 0%,
+    var(--light-background) 50%,
+    var(--light-background) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="video-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(123,37,66,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23video-pattern)"/></svg>');
+    animation: float 15s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.video-container {
+    max-width: 1200px;
+    margin: 0 auto 8rem auto;
+    padding: 0 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.video-container h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--wine);
+    margin-bottom: 6rem;
+    position: relative;
+    text-shadow: 0 4px 8px rgba(43, 0, 13, 0.2);
+}
+
+.video-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--magenta), var(--purple), var(--golden));
+    border-radius: 2px;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: var(--wine);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+            0 25px 80px rgba(43, 0, 13, 0.3),
+            0 10px 25px rgba(123, 37, 66, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.video-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent);
+    transition: left 1s ease;
+}
+
+.video-placeholder:hover::before {
+    left: 100%;
+}
+
+.video-placeholder:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+            0 35px 100px rgba(43, 0, 13, 0.4),
+            0 15px 35px rgba(123, 37, 66, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.video-placeholder p {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--light-background);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Play Button Effect */
+.video-placeholder::after {
+    content: '▶';
+    position: absolute;
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: playButtonPulse 2s ease-in-out infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+/* Team Container */
+.team-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.team-container h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--wine);
+    margin-bottom: 3rem;
+    position: relative;
+    text-shadow: 0 4px 8px rgba(43, 0, 13, 0.2);
+}
+
+.team-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--magenta), var(--purple), var(--golden));
+    border-radius: 2px;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.team-section h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--purple);
+    margin-bottom: 1.5rem;
+}
+
+.team-section p {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--light-text);
+    margin-bottom: 4rem;
+    opacity: 0.8;
+}
+
+.team-grid {
+    margin-bottom: 6rem;
+}
+
+/* Team Cards Container - Horizontal Layout */
+.team-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Individual Team Card - Compact Version */
+.team-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.1),
+            0 3px 10px rgba(123, 37, 66, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    flex: 0 1 220px;
+    min-width: 200px;
+    max-width: 240px;
+}
+
+.team-card:nth-child(1) { animation-delay: 0.1s; }
+.team-card:nth-child(2) { animation-delay: 0.2s; }
+.team-card:nth-child(3) { animation-delay: 0.3s; }
+.team-card:nth-child(4) { animation-delay: 0.4s; }
+.team-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Card Hover Effects */
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+    transparent,
+    rgba(123, 37, 66, 0.08),
+    transparent);
+    transition: left 0.5s ease;
+}
+
+.team-card:hover::before {
+    left: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.15),
+            0 8px 20px rgba(123, 37, 66, 0.2);
+    border-color: var(--golden);
+}
+
+/* Team Member Images - Smaller */
+.team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--golden);
+    box-shadow: 0 6px 15px rgba(217, 140, 74, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.team-card:hover img {
+    transform: scale(1.1) rotate(3deg);
+    border-color: var(--magenta);
+    box-shadow: 0 10px 25px rgba(123, 37, 66, 0.4);
+}
+
+/* Team Member Names - Compact */
+.team-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--wine);
+    margin-bottom: 0.8rem;
+    text-shadow: 0 1px 3px rgba(43, 0, 13, 0.1);
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+    line-height: 1.2;
+}
+
+.team-card:hover h3 {
+    color: var(--magenta);
+}
+
+/* Team Member Roles - Compact */
+.team-card p {
+    font-size: 1.4rem;
+    color: var(--purple);
+    font-weight: 500;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    transition: all 0.3s ease;
+    line-height: 1.3;
+}
+
+.team-card:hover p {
+    color: var(--wine);
+    font-weight: 600;
+}
+
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-50%) scaleX(1); }
+    50% { transform: translateX(-50%) scaleX(1.2); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes playButtonPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
 }
 
 /* CTA Section */
@@ -1053,7 +1453,6 @@ header .navbar button:hover {
     z-index: 10;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 40px;
     text-align: center;
     background: rgb(173, 95, 76);
     backdrop-filter: blur(30px);
@@ -1264,215 +1663,12 @@ header .navbar button:hover {
     }
 }
 
-/* VIDEO SECTION */
-
-.video-section {
-    padding: 12rem 0;
-    background: linear-gradient(135deg,
-    var(--light-background) 0%,
-    rgba(178, 98, 147, 0.1) 50%,
-    var(--light-background) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.video-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="video-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(123,37,66,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23video-pattern)"/></svg>');
-    animation: float 15s ease-in-out infinite;
-    opacity: 0.6;
-}
-
-.video-container {
-    max-width: 1200px;
-    margin: 0 auto 8rem auto;
-    padding: 0 4rem;
-    position: relative;
-    z-index: 2;
-}
-
-.video-container h2 {
-    font-size: 5rem;
-    font-weight: 900;
-    text-align: center;
-    color: var(--wine);
-    margin-bottom: 6rem;
-    position: relative;
-    text-shadow: 0 4px 8px rgba(43, 0, 13, 0.2);
-}
-
-.video-container h2::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--magenta), var(--purple), var(--golden));
-    border-radius: 2px;
-    animation: shimmer 2s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-    0%, 100% { transform: translateX(-50%) scaleX(1); }
-    50% { transform: translateX(-50%) scaleX(1.2); }
-}
-
-.video-placeholder {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background: linear-gradient(135deg,
-    var(--wine) 0%,
-    var(--magenta) 35%,
-    var(--purple) 70%,
-    var(--golden) 100%);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow:
-            0 25px 80px rgba(43, 0, 13, 0.3),
-            0 10px 25px rgba(123, 37, 66, 0.2),
-            inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.video-placeholder::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent);
-    transition: left 1s ease;
-}
-
-.video-placeholder:hover::before {
-    left: 100%;
-}
-
-.video-placeholder:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow:
-            0 35px 100px rgba(43, 0, 13, 0.4),
-            0 15px 35px rgba(123, 37, 66, 0.3),
-            inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.video-placeholder p {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--light-background);
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 2;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-/* Play Button Effect */
-.video-placeholder::after {
-    content: '▶';
-    position: absolute;
-    font-size: 6rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    animation: playButtonPulse 2s ease-in-out infinite;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-@keyframes playButtonPulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.2); }
-}
-
-/* Team Container */
-.team-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 4rem;
-    position: relative;
-    z-index: 2;
-}
-
-.team-container h2 {
-    font-size: 4.5rem;
-    font-weight: 800;
-    text-align: center;
-    color: var(--magenta);
-    margin-bottom: 3rem;
-}
-
-.team-section h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    color: var(--purple);
-    margin-bottom: 1.5rem;
-}
-
-.team-section p {
-    font-size: 2rem;
-    text-align: center;
-    color: var(--light-text);
-    margin-bottom: 4rem;
-    opacity: 0.8;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    margin-top: 4rem;
-}
-
 /* BENEFITS SECTION */
 
 .benefits-section {
     padding: 12rem 0;
-    background: linear-gradient(135deg,
-    var(--wine) 0%,
-    var(--magenta) 50%,
-    var(--purple) 100%);
     position: relative;
     overflow: hidden;
-}
-
-.benefits-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 80%,
-    rgba(217, 140, 74, 0.2) 0%,
-    transparent 50%),
-    radial-gradient(circle at 80% 20%,
-            rgba(255, 255, 255, 0.1) 0%,
-            transparent 50%);
-    animation: backgroundMove 20s ease-in-out infinite;
-}
-
-@keyframes backgroundMove {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(20px, -20px) rotate(1deg); }
-    50% { transform: translate(-10px, 10px) rotate(-1deg); }
-    75% { transform: translate(-20px, -10px) rotate(0.5deg); }
 }
 
 .benefits-section h2 {
@@ -1653,10 +1849,9 @@ header .navbar button:hover {
 .benefit-card li {
     font-size: 1.8rem;
     color: var(--light-text);
-    padding: 1.5rem 0;
     border-bottom: 1px solid rgba(123, 37, 66, 0.1);
     position: relative;
-    padding-left: 4rem;
+    padding: 1.5rem 0 1.5rem 4rem;
     transition: all 0.3s ease;
 }
 
@@ -1692,6 +1887,7 @@ header .navbar button:hover {
     transform: translateY(-50%) scale(1.2);
     box-shadow: 0 5px 15px rgba(123, 37, 66, 0.3);
 }
+/* FAQ, PLANS, TESTIMONIALS SECTIONS - UNIFIED BACKGROUND */
 
 .unified-gradient-container {
     background: linear-gradient(135deg,
@@ -1742,7 +1938,8 @@ header .navbar button:hover {
 /* RESETEAR BACKGROUNDS DE SECCIONES INDIVIDUALES */
 .faq-section,
 .plans-section,
-.testimonials {
+.testimonials,
+.benefits-section {
     background: transparent !important;
     padding: 12rem 0;
     position: relative;
@@ -1753,7 +1950,8 @@ header .navbar button:hover {
 /* Eliminar pseudo-elementos de fondo individuales */
 .faq-section::before,
 .plans-section::before,
-.testimonials::before {
+.testimonials::before,
+.benefits-section::before {
     display: none;
 }
 
@@ -1850,7 +2048,7 @@ header .navbar button:hover {
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     max-height: 0;
-    background: rgba(247, 237, 220, 0.95);
+    background: linear-gradient(135deg, rgba(110, 0, 129, 0.05) 0%, rgba(89, 3, 58, 0.05) 100%);
 }
 
 .faq-answer-content {
@@ -2223,28 +2421,6 @@ header .navbar button:hover {
     margin-bottom: 2rem;
     position: relative;
     text-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-}
-
-.testimonials__header h1::before {
-    content: '"';
-    position: absolute;
-    left: -4rem;
-    top: -2rem;
-    font-size: 8rem;
-    color: var(--golden);
-    opacity: 0.3;
-    font-family: 'Georgia', serif;
-}
-
-.testimonials__header h1::after {
-    content: '"';
-    position: absolute;
-    right: -4rem;
-    bottom: -2rem;
-    font-size: 8rem;
-    color: var(--golden);
-    opacity: 0.3;
-    font-family: 'Georgia', serif;
 }
 
 .testimonials__header p {
@@ -2637,9 +2813,8 @@ footer {
 
 .ethics-section li {
     font-size: 1.8rem;
-    padding: 1.2rem 0;
     position: relative;
-    padding-left: 4rem;
+    padding: 1.2rem 0 1.2rem 4rem;
     transition: all 0.3s ease;
 }
 
@@ -2776,9 +2951,8 @@ footer {
 .terms-section li {
     font-size: 1.8rem;
     color: var(--light-text);
-    padding: 1rem 0;
     position: relative;
-    padding-left: 3rem;
+    padding: 1rem 0 1rem 3rem;
     border-bottom: 1px solid rgba(123, 37, 66, 0.1);
     transition: all 0.3s ease;
 }
@@ -3341,8 +3515,7 @@ footer {
 
     .plan-card li {
         font-size: 1.6rem;
-        padding: 1rem 0;
-        padding-left: 2.5rem;
+        padding: 1rem 0 1rem 2.5rem;
     }
 
     .plan-card button {
@@ -3443,8 +3616,7 @@ footer {
 
     .terms-section li {
         font-size: 1.6rem;
-        padding: 0.8rem 0;
-        padding-left: 2.5rem;
+        padding: 0.8rem 0 0.8rem 2.5rem;
     }
 
     .contact-info {

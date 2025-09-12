@@ -252,7 +252,6 @@
     <div class="video-container">
         <h2 class="animate-on-scroll" data-i18n="video_section_title">Exploration of the application</h2>
         <div class="video-placeholder animate-on-scroll">
-            <p>Video placeholder - Application demonstration</p>
         </div>
     </div>
 
@@ -262,50 +261,78 @@
             <h3 class="animate-on-scroll" data-i18n="team.title">Team Members</h3>
             <p class="animate-on-scroll" data-i18n="team.subtitle">These are the names behind the StockSip initiative</p>
             <div class="team-grid animate-on-scroll">
-                <!-- Team members would go here -->
+                <div class="team-cards">
+                    <div class="team-card">
+                        <img src="assets/images/member-nicolas.png" alt="Team Member Nicolas">
+                        <h3>Nicolas Juarez</h3>
+                        <p>Team Leader</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/images/member-oscar.png" alt="Team Member Oscar">
+                        <h3>Oscar Armas</h3>
+                        <p>Team Member</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/images/member-farid.png" alt="Team Member Farid">
+                        <h3>Farid Coronel</h3>
+                        <p>Team Member</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/images/member_matias.jpg" alt="Team Member Matias">
+                        <h3>Matías Diaz</h3>
+                        <p>Team Member</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/images/member-camila.png" alt="Team Leader Camila">
+                        <h3>Camila Huamani</h3>
+                        <p>Team Member</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="benefits-section" id="benefits">
-    <h2 class="animate-on-scroll" data-i18n="benefits.title">Benefits</h2>
-    <div class="benefits-points">
-        <div class="benefit-point animate-on-scroll">
-            <span data-i18n="benefits.point1">Reduce losses from expiration</span>
-        </div>
-        <div class="benefit-point animate-on-scroll">
-            <span data-i18n="benefits.point2">Improve product turnover</span>
-        </div>
-        <div class="benefit-point animate-on-scroll">
-            <span data-i18n="benefits.point3">Make data-driven decisions</span>
-        </div>
-    </div>
-
-    <div class="benefits-cards">
-        <div class="benefit-card animate-on-scroll">
-            <h3 data-i18n="benefits.card1.title">FOR LIQUOR STORE OWNERS</h3>
-            <ul>
-                <li data-i18n="benefits.card1.list.0">Loss reduction</li>
-                <li data-i18n="benefits.card1.list.1">Efficient stock management</li>
-                <li data-i18n="benefits.card1.list.2">Improve profits</li>
-            </ul>
-        </div>
-
-        <div class="benefit-card animate-on-scroll">
-            <h3 data-i18n="benefits.card2.title">FOR SUPPLIERS</h3>
-            <ul>
-                <li data-i18n="benefits.card2.list.0">Demand prediction</li>
-                <li data-i18n="benefits.card2.list.1">Streamlined deliveries</li>
-                <li data-i18n="benefits.card2.list.2">Performance improvement</li>
-            </ul>
+            <div class="video-placeholder animate-on-scroll">
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Gradient container -->
 <div class="unified-gradient-container">
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <h2 class="animate-on-scroll" data-i18n="benefits.title">Benefits</h2>
+        <div class="benefits-points">
+            <div class="benefit-point animate-on-scroll">
+                <span data-i18n="benefits.point1">Reduce losses from expiration</span>
+            </div>
+            <div class="benefit-point animate-on-scroll">
+                <span data-i18n="benefits.point2">Improve product turnover</span>
+            </div>
+            <div class="benefit-point animate-on-scroll">
+                <span data-i18n="benefits.point3">Make data-driven decisions</span>
+            </div>
+        </div>
+
+        <div class="benefits-cards">
+            <div class="benefit-card animate-on-scroll">
+                <h3 data-i18n="benefits.card1.title">FOR LIQUOR STORE OWNERS</h3>
+                <ul>
+                    <li data-i18n="benefits.card1.list.0">Loss reduction</li>
+                    <li data-i18n="benefits.card1.list.1">Efficient stock management</li>
+                    <li data-i18n="benefits.card1.list.2">Improve profits</li>
+                </ul>
+            </div>
+
+            <div class="benefit-card animate-on-scroll">
+                <h3 data-i18n="benefits.card2.title">FOR SUPPLIERS</h3>
+                <ul>
+                    <li data-i18n="benefits.card2.list.0">Demand prediction</li>
+                    <li data-i18n="benefits.card2.list.1">Streamlined deliveries</li>
+                    <li data-i18n="benefits.card2.list.2">Performance improvement</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
@@ -468,6 +495,39 @@
 
 <script src="assets/scripts/i18n.js"></script>
 <script>
+
+    // FAQ Toggle Functionality
+    function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        const faqAnswer = faqItem.querySelector('.faq-answer');
+        const faqContent = faqItem.querySelector('.faq-answer-content');
+        const isActive = faqItem.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            item.classList.remove('active');
+            answer.style.maxHeight = '0';
+            answer.style.padding = '0 25px';
+        });
+
+        if (!isActive) {
+            faqItem.classList.add('active');
+            const contentHeight = faqContent.scrollHeight;
+            faqAnswer.style.maxHeight = contentHeight + 50 + 'px';
+            faqAnswer.style.padding = '25px';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            if (!item.classList.contains('active')) {
+                answer.style.maxHeight = '0';
+                answer.style.padding = '0 25px';
+            }
+        });
+    });
+
     // Image Carousel Functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
@@ -513,22 +573,6 @@
     setInterval(() => {
         changeSlide(1);
     }, 5000);
-
-    // FAQ Toggle Functionality
-    function toggleFAQ(element) {
-        const faqItem = element.parentElement;
-        const isActive = faqItem.classList.contains('active');
-
-        // Cierra todos los items
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.classList.remove('active');
-        });
-
-        // Abre el clickeado si no estaba activo
-        if (!isActive) {
-            faqItem.classList.add('active');
-        }
-    }
 
     // Scroll-triggered animations
     function animateOnScroll() {
