@@ -11,7 +11,7 @@
 
 <header id="header">
     <a href="#" class="logo">
-        <img src="https://via.placeholder.com/90x60/6E0081/FFFFFF?text=SS" alt="StockSip Logo">
+        <img src="assets/images/stocksip_logo.png" alt="StockSip Logo">
     </a>
 
     <nav class="navbar">
@@ -34,59 +34,75 @@
 </header>
 
 <section class="home" id="home">
+    <!-- Floating Elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+
+    <!-- Particle Elements -->
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
     <div class="content">
         <h3 data-i18n="home.title">Optimize your inventory intelligently with StockSip!</h3>
         <a href="#product" class="btn" data-i18n="home.ver_planes">View plans</a>
     </div>
 </section>
 
-<!-- Mission, Vision, Values Cards Section -->
-<section class="cards-section">
-    <div class="card-container">
-        <div class="card mission-card animate-on-scroll">
-            <h3 data-i18n="cards.mission.title">MISSION</h3>
-            <p data-i18n="cards.mission.description">Provide a solution for liquor store owners to manage their inventory efficiently and take better care of their products.</p>
+<!-- About StockSip & Stats Section -->
+<section class="about-stats-section">
+    <div class="section-container">
+        <!-- About StockSip - Cards -->
+        <div class="about-content">
+            <h2 class="about-title animate-on-scroll" data-i18n="about.title">About StockSip</h2>
+            <div class="card-container">
+                <div class="card mission-card animate-on-scroll">
+                    <h3 data-i18n="cards.mission.title">MISSION</h3>
+                    <p data-i18n="cards.mission.description">Provide a solution for liquor store owners to manage their inventory efficiently and take better care of their products.</p>
+                </div>
+
+                <div class="card vision-card animate-on-scroll">
+                    <h3 data-i18n="cards.vision.title">VISION</h3>
+                    <p data-i18n="cards.vision.description">To be the leading app in intelligent liquor store management, facilitating informed decisions and an excellent customer experience.</p>
+                </div>
+
+                <div class="card values-card animate-on-scroll">
+                    <h3 data-i18n="cards.values.title">VALUES</h3>
+                    <ul>
+                        <li data-i18n="cards.values.transparencia">Transparency</li>
+                        <li data-i18n="cards.values.innovation">Constant innovation</li>
+                        <li data-i18n="cards.values.responsibility">Responsibility to customers</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="card vision-card animate-on-scroll">
-            <h3 data-i18n="cards.vision.title">VISION</h3>
-            <p data-i18n="cards.vision.description">To be the leading app in intelligent liquor store management, facilitating informed decisions and an excellent customer experience.</p>
-        </div>
+        <!-- Stats -->
+        <div class="stats-content">
+            <h2 class="stats-title animate-on-scroll" data-i18n="stats_title">Results that speak for themselves</h2>
+            <p class="stats-subtitle animate-on-scroll" data-i18n="stats_subtitle">
+                Our solution has transformed inventory management in liquor stores, optimizing processes and maximizing profits.
+            </p>
 
-        <div class="card values-card animate-on-scroll">
-            <h3 data-i18n="cards.values.title">VALUES</h3>
-            <ul>
-                <li data-i18n="cards.values.transparencia">Transparency</li>
-                <li data-i18n="cards.values.innovation">Constant innovation</li>
-                <li data-i18n="cards.values.responsibility">Responsibility to customers</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="stats-section">
-    <div class="stats-container">
-        <h2 class="stats-title animate-on-scroll" data-i18n="stats_title">Results that speak for themselves</h2>
-        <p class="stats-subtitle animate-on-scroll" data-i18n="stats_subtitle">
-            Our solution has transformed inventory management in liquor stores, optimizing processes and maximizing profits.
-        </p>
-
-        <div class="stats-grid">
-            <div class="stat-item animate-on-scroll">
-                <div class="stat-number" data-target="500">0</div>
-                <div class="stat-label" data-i18n="stats_1_label">Liquor stores managed</div>
-            </div>
-            <div class="stat-item animate-on-scroll">
-                <div class="stat-number" data-target="99">0</div>
-                <div class="stat-label" data-i18n="stats_2_label">Satisfied customers</div>
-            </div>
-            <div class="stat-item animate-on-scroll">
-                <div class="stat-number" data-target="35">0</div>
-                <div class="stat-label" data-i18n="stats_3_label">Reduction in stockouts</div>
-            </div>
-            <div class="stat-item animate-on-scroll">
-                <div class="stat-number" data-target="20">0</div>
-                <div class="stat-label" data-i18n="stats_4_label">Increase in sales</div>
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label" data-i18n="stats_1_label">Liquor stores managed</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label" data-i18n="stats_2_label">Satisfied customers</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="35">0</div>
+                    <div class="stat-label" data-i18n="stats_3_label">Reduction in stockouts</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="20">0</div>
+                    <div class="stat-label" data-i18n="stats_4_label">Increase in sales</div>
+                </div>
             </div>
         </div>
     </div>
@@ -438,6 +454,10 @@
     </div>
     <div class="copyright-text">
         <span data-i18n="footer.rights">©Copyright, OpenDoors 2025. All rights reserved</span>
+        <span style="margin: 0 1rem;">|</span>
+        <a href="terms_conditions.html" style="color: var(--light-background); text-decoration: none; font-size: 0.9rem;" data-i18n="footer.terms">Terms and Conditions</a>
+        <span style="margin: 0 1rem;">|</span>
+        <a href="privacy.html" style="color: var(--light-background); text-decoration: none; font-size: 0.9rem;" data-i18n="footer.privacy">Privacy Policy</a>
     </div>
 </footer>
 
