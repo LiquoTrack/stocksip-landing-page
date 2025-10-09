@@ -100,7 +100,7 @@ const translations = {
         "plans.premium.list.2": "Custom alerts",
         "plans.premium.button": "Choose",
         "footer.slogan": "Quality and efficiency are guaranteed in every bottle",
-        "footer.rights": "@Copyright, OpenDoors 2025. All rights reserved",
+        "footer.rights": "@Copyright, LiquoTrack 2025. All rights reserved",
 
         "terms.title": "Terms and Conditions of Service",
         "terms.subtitle": "StockSip - Smart Inventory Management",
@@ -478,7 +478,8 @@ const translations = {
         "cards.mission.description": "Brindar una solución para que los dueños de licorerías gestionen su inventario de forma eficiente y cuiden mejor sus productos.",
         "cards.vision.title": "VISIÓN",
         "cards.vision.description": "Ser la app líder en gestión inteligente de licorerías, facilitando decisiones informadas y una excelente experiencia para los clientes.",
-        "cards.values.title": "VALORES", "cards.valores.transparencia": "Transparencia",
+        "cards.values.title": "VALORES",
+        "cards.values.transparencia": "Transparencia",
         "cards.values.innovation": "Innovación constante",
         "cards.values.responsibility": "Responsabilidad con los clientes",
         "stats_title": "Resultados que hablan por sí solos",
@@ -563,7 +564,7 @@ const translations = {
         "plans.premium.list.2": "Alertas personalizadas",
         "plans.premium.button": "Elegir",
         "footer.slogan": "Calidad y eficiencia aseguradas en cada botella",
-        "footer.rights": "@Copyright, OpenDoors 2025.Todos los derechos reservados",
+        "footer.rights": "@Copyright, LiquoTrack 2025.Todos los derechos reservados",
 
         "terms.title": "Términos y Condiciones de Servicio",
         "terms.subtitle": "StockSip - Gestión Inteligente de Inventarios",
